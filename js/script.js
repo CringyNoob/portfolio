@@ -125,15 +125,62 @@ document.addEventListener('DOMContentLoaded', () => {
     sections.forEach(section => sectionObserver.observe(section));
 
     // --------------------------------------------------------------------------
-    // 5. Scroll-to-Top Button
+    // 5. Scroll Reveal Micro-Animations (GPU Accelerated, Zero Jank)
     // --------------------------------------------------------------------------
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 350) {
-            scrollToTopBtn.classList.add('visible');
-        } else {
-            scrollToTopBtn.classList.remove('visible');
-        }
+    const revealTargets = document.querySelectorAll(
+        '.section-header, .about-card, .education-card, .pub-card, .timeline-item, .project-card, .achievement-card, .skill-category-card, .extra-card, .contact-card'
+    );
+
+    revealTargets.forEach(el => el.classList.add('reveal-init'));
+
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('revealed');
+                // Clean up: unobserve once revealed so zero CPU/GPU overhead while reading
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        root: null,
+        rootMargin: '0px 0px -50px 0px',
+        threshold: 0.1
     });
+
+    revealTargets.forEach(el => revealObserver.observe(el));
+
+    // --------------------------------------------------------------------------
+    // 6. Ambient Scroll Progress Bar & Scroll-to-Top Button
+    // --------------------------------------------------------------------------
+    const scrollProgressBar = document.getElementById('scroll-progress');
+    let ticking = false;
+
+    window.addEventListener('scroll', () => {
+        if (!ticking) {
+            window.requestAnimationFrame(() => {
+                const scrollTop = window.scrollY || document.documentElement.scrollTop;
+                const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                
+                // Update Top Progress Bar
+                if (scrollProgressBar && scrollHeight > 0) {
+                    const progress = Math.min(100, Math.max(0, (scrollTop / scrollHeight) * 100));
+                    scrollProgressBar.style.width = `${progress}%`;
+                }
+
+                // Update Floating Action Button
+                if (scrollToTopBtn) {
+                    if (scrollTop > 350) {
+                        scrollToTopBtn.classList.add('visible');
+                    } else {
+                        scrollToTopBtn.classList.remove('visible');
+                    }
+                }
+
+                ticking = false;
+            });
+            ticking = true;
+        }
+    }, { passive: true });
 
     if (scrollToTopBtn) {
         scrollToTopBtn.addEventListener('click', () => {
@@ -145,7 +192,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // --------------------------------------------------------------------------
-    // 6. Publication Filter Tabs
+    // 7. Publication Filter Tabs
     // --------------------------------------------------------------------------
     filterButtons.forEach(btn => {
         btn.addEventListener('click', () => {
@@ -179,7 +226,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // --------------------------------------------------------------------------
-    // 7. BibTeX Modal & Copy Toast
+    // 8. BibTeX Modal & Copy Toast
     // --------------------------------------------------------------------------
     const bibtexData = {
         'pub-epi-benchmark': `@article{khan2026benchmarking,
@@ -279,7 +326,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // --------------------------------------------------------------------------
-    // 8. Ctrl+P / Cmd+P Print Handler
+    // 9. Ctrl+P / Cmd+P Print Handler
     // --------------------------------------------------------------------------
     document.addEventListener('keydown', (e) => {
         if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'p') {
