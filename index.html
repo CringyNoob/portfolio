@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO & Metadata -->
+    <title>Md. Wali Ullah Khan | Academic & Engineering Portfolio</title>
+    <meta name="description" content="Portfolio of Md. Wali Ullah Khan — Undergraduate Researcher & Full-Stack Software Engineer at United International University focusing on Data Science, Bioinformatics, AI Systems, and Distributed Architectures.">
+    <meta name="author" content="Md. Wali Ullah Khan">
+    <meta name="keywords" content="Md. Wali Ullah Khan, Wali Ullah Khan, Portfolio, Data Science, Bioinformatics, Full Stack Developer, Machine Learning, UIU, Computer Science">
+    
+    <!-- OpenGraph / Social Cards -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Md. Wali Ullah Khan | Academic & Engineering Portfolio">
+    <meta property="og:description" content="Undergraduate Researcher & Full-Stack Software Engineer at United International University. Major in Data Science.">
+    <meta property="og:image" content="./assets/images/Profile.jpg">
+    
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css" />
+
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+
+    <!-- Mobile Header -->
+    <header class="mobile-header" id="mobile-header">
+        <div class="mobile-brand">
+            <img src="./assets/images/Profile.jpg" alt="Md. Wali Ullah Khan" class="mobile-avatar" onerror="this.onerror=null;this.src='./assets/images/profile.png';">
+            <div class="mobile-title">Md. Wali Ullah Khan</div>
+        </div>
+        <div class="mobile-actions">
+            <button class="social-icon-btn" id="mobile-theme-toggle" aria-label="Toggle Theme">
+                <i class="fa-solid fa-sun"></i>
+            </button>
+            <button class="hamburger-btn" id="hamburger-btn" aria-label="Open Navigation">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+    <div class="app-layout">
+        
+        <!-- Left Sticky Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="profile-card">
+                <div class="profile-avatar-wrapper">
+                    <img src="./assets/images/Profile.jpg" alt="Md. Wali Ullah Khan" class="profile-avatar" onerror="this.onerror=null;this.src='./assets/images/profile.png';">
+                    <div class="avatar-status-badge" title="Open to Research & Engineering Opportunities"></div>
+                </div>
+
+                <h1 class="profile-name">Md. Wali Ullah Khan</h1>
+                <p class="profile-role">Undergraduate Researcher &amp; Full-Stack Engineer</p>
+                
+                <p class="profile-affiliation">
+                    <i class="fa-solid fa-building-columns"></i> United International University
+                </p>
+                <p class="profile-location">
+                    <i class="fa-solid fa-location-dot"></i> Mirpur, Dhaka, Bangladesh
+                </p>
+
+                <!-- Social & Contact Links -->
+                <div class="social-links">
+                    <a href="mailto:wali.official71@gmail.com" class="social-icon-btn" title="Email" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-solid fa-envelope"></i>
+                    </a>
+                    <a href="https://github.com/CringyNoob" class="social-icon-btn" title="GitHub" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/search/results/all/?keywords=Md%20Wali%20Ullah%20Khan" class="social-icon-btn" title="LinkedIn" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                    <a href="tel:+8801682310315" class="social-icon-btn" title="Phone / WhatsApp" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-solid fa-phone"></i>
+                    </a>
+                </div>
+
+                <!-- Action CTA -->
+                <div class="sidebar-cta-group">
+                    <a href="./assets/docs/Md_Wali_Ullah_Khan_Resume.pdf" download="Md_Wali_Ullah_Khan_Resume.pdf" class="btn-primary" id="download-cv-btn">
+                        <i class="fa-solid fa-file-arrow-down"></i> Download Resume
+                    </a>
+                    <a href="./assets/docs/Md_Wali_Ullah_Khan_Resume.pdf" target="_blank" class="btn-outline" id="view-cv-btn">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i> View PDF
+                    </a>
+                </div>
+            </div>
+
+            <!-- ScrollSpy Navigation Menu -->
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="#about" class="nav-link active"><i class="fa-solid fa-user"></i> About Me</a></li>
+                    <li><a href="#experience" class="nav-link"><i class="fa-solid fa-briefcase"></i> Experience</a></li>
+                    <li><a href="#education" class="nav-link"><i class="fa-solid fa-graduation-cap"></i> Education</a></li>
+                    <li><a href="#projects" class="nav-link"><i class="fa-solid fa-code"></i> Projects</a></li>
+                    <li><a href="#achievements" class="nav-link"><i class="fa-solid fa-trophy"></i> Achievements</a></li>
+                    <li><a href="#publications" class="nav-link"><i class="fa-solid fa-book-bookmark"></i> Publications</a></li>
+                    <li><a href="#skills" class="nav-link"><i class="fa-solid fa-screwdriver-wrench"></i> Skills</a></li>
+                    <li><a href="#extracurriculars" class="nav-link"><i class="fa-solid fa-users-gear"></i> Leadership</a></li>
+                    <li><a href="#contact" class="nav-link"><i class="fa-solid fa-paper-plane"></i> Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- Sidebar Footer -->
+            <div class="sidebar-footer">
+                <button class="theme-toggle-btn" id="theme-toggle" aria-label="Switch Theme">
+                    <i class="fa-solid fa-sun" id="theme-toggle-icon"></i>
+                    <span id="theme-toggle-text">Light</span>
+                </button>
+                <span style="font-size: 0.78rem; color: var(--text-muted);">© 2026</span>
+            </div>
+        </aside>
+
+        <!-- Right Main Content Area -->
+        <main class="main-content">
+
+            <!-- 1. ABOUT SECTION -->
+            <section id="about" class="content-section">
+                <div class="section-header">
+                    <div class="section-icon"><i class="fa-solid fa-user"></i></div>
+                    <h2 class="section-title">About Me</h2>
+                </div>
+                
+                <div class="about-card">
+                    <p class="about-intro">
+                        Final-year <strong>Computer Science &amp; Engineering</strong> student (Expected Graduation: <strong>Oct 2026</strong>) at <strong>United International University</strong> (CGPA: 3.85 / 4.00) specializing in <strong>Data Science</strong> and <strong>AI/ML</strong>, seeking a <strong>Junior Software Engineer</strong> or <strong>Software Engineering Internship</strong> role.
+                    </p>
+                    <p class="about-bio">
+                        Proven ability to architect distributed microservices and scalable full-stack applications. Eager to leverage strong foundations in <strong>Python</strong>, the <strong>PERN stack (PostgreSQL, Express, React, Node.js)</strong>, <strong>FastAPI</strong>, <strong>Graph Neural Networks</strong>, and modern <strong>CI/CD &amp; Docker</strong> practices in high-impact industry settings.
+                    </p>
+                    
+                    <div class="research-focus-title">Core Competencies &amp; Technical Focus</div>
+                    <div class="research-tags">
+                        <span class="tag-pill"><i class="fa-solid fa-network-wired"></i> Distributed Microservices</span>
+                        <span class="tag-pill"><i class="fa-solid fa-layer-group"></i> Full-Stack &amp; PERN Architecture</span>
+                        <span class="tag-pill"><i class="fa-brands fa-python"></i> Python &amp; FastAPI Backend</span>
+                        <span class="tag-pill"><i class="fa-solid fa-brain"></i> Machine Learning &amp; AI Systems</span>
+                        <span class="tag-pill"><i class="fa-solid fa-dna"></i> Computational Biology &amp; GNNs</span>
+                        <span class="tag-pill"><i class="fa-brands fa-docker"></i> Docker &amp; CI/CD Pipelines</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 2. EXPERIENCE SECTION -->
+            <section id="experience" class="content-section">
+                <div class="section-header">
+                    <div class="section-icon"><i class="fa-solid fa-briefcase"></i></div>
+                    <h2 class="section-title">Experience</h2>
+                </div>
+
+                <div class="timeline">
+                    <!-- Item 1: Undergraduate Teaching Assistant -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card">
+                            <div class="timeline-header">
+                                <h3 class="role-title">Undergraduate Teaching Assistant and Grader</h3>
+                                <span class="timeline-date"><i class="fa-regular fa-calendar"></i> Jan 2023 – Present</span>
+                            </div>
+                            <div class="timeline-org">
+                                <i class="fa-solid fa-building-columns"></i> United International University · Dhaka, Bangladesh
+                            </div>
+                            <ul class="timeline-bullets">
+                                <li>Facilitated 4 core CS courses, improving comprehension for 100+ students by an estimated 20% through targeted lab mentoring.</li>
+                                <li>Streamlined the assessment and grading process, reducing evaluation turnaround time by 15%.</li>
+                                <li>Judged and reviewed undergraduate student laboratory projects and assignments during semester evaluations.</li>
+                            </ul>
+                            <div class="courses-supervised">
+                                <div class="courses-title">Courses Supervised:</div>
+                                <div class="courses-tags">
+                                    <span class="tag-pill"><i class="fa-solid fa-code"></i> Object Oriented Programming (OOP)</span>
+                                    <span class="tag-pill"><i class="fa-solid fa-terminal"></i> Structured Programming Language (SPL)</span>
+                                    <span class="tag-pill"><i class="fa-solid fa-database"></i> Database Management System (DBMS)</span>
+                                    <span class="tag-pill"><i class="fa-solid fa-sitemap"></i> Data Structure and Algorithms (DSA)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 3. EDUCATION SECTION -->
+            <section id="education" class="content-section">
+                <div class="section-header">
+                    <div class="section-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                    <h2 class="section-title">Education</h2>
+                </div>
+
+                <div class="education-list">
+                    <!-- B.Sc. CSE -->
+                    <div class="education-card featured">
+                        <div class="education-header">
+                            <h3 class="degree-title">B.Sc. in Computer Science and Engineering</h3>
+                            <span class="education-date"><i class="fa-regular fa-calendar"></i> Nov 2022 – Oct 2026 (Expected)</span>
+                        </div>
+                        <div class="institution-name">
+                            <i class="fa-solid fa-building-columns"></i> United International University, Dhaka, Bangladesh
+                        </div>
+                        <p style="font-size: 0.93rem; color: var(--text-secondary); margin-bottom: 0.6rem;">
+                            <strong>Major:</strong> Data Science
+                        </p>
+                        <div class="education-stats">
+                            <span class="gpa-badge"><i class="fa-solid fa-star"></i> CGPA: 3.85 / 4.00</span>
+                            <span class="honors-badge"><i class="fa-solid fa-award"></i> Academic Excellence Scholarship (2022 – 2026)</span>
+                        </div>
+                    </div>
+
+                    <!-- HSC -->
+                    <div class="education-card">
+                        <div class="education-header">
+                            <h3 class="degree-title">Higher Secondary Certificate (HSC), Science</h3>
+                            <span class="education-date"><i class="fa-regular fa-calendar"></i> Dhaka, Bangladesh</span>
+                        </div>
+                        <div class="institution-name">
+                            <i class="fa-solid fa-school"></i> Dhaka Commerce College
+                        </div>
+                        <div class="education-stats">
+                            <span class="gpa-badge"><i class="fa-solid fa-check"></i> GPA: 5.00 / 5.00</span>
+                        </div>
+                    </div>
+
+                    <!-- SSC -->
+                    <div class="education-card">
+                        <div class="education-header">
+                            <h3 class="degree-title">Secondary School Certificate (SSC), Science</h3>
+                            <span class="education-date"><i class="fa-regular fa-calendar"></i> Dhaka, Bangladesh</span>
+                        </div>
+                        <div class="institution-name">
+                            <i class="fa-solid fa-school"></i> Monipur High School and College
+                        </div>
+                        <div class="education-stats">
+                            <span class="gpa-badge"><i class="fa-solid fa-check"></i> GPA: 4.83 / 5.00</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 4. PROJECTS SECTION -->
+            <section id="projects" class="content-section">
+                <div class="section-header">
+                    <div class="section-icon"><i class="fa-solid fa-code"></i></div>
+                    <h2 class="section-title">Projects</h2>
+                </div>
+
+                <div class="projects-grid">
+                    
+                    <!-- Project 1: EduSync -->
+                    <div class="project-card">
+                        <div class="project-top">
+                            <div class="project-header">
+                                <a href="https://github.com/CringyNoob/EduSync" target="_blank" rel="noopener noreferrer" class="project-title-link">
+                                    <i class="fa-solid fa-graduation-cap" style="color: var(--accent-primary);"></i> EduSync
+                                </a>
+                                <div class="project-links">
+                                    <a href="https://github.com/CringyNoob/EduSync" target="_blank" rel="noopener noreferrer" class="project-icon-link" title="GitHub Repository">
+                                        <i class="fa-brands fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <p class="project-desc">
+                                A microservices-driven university ecosystem featuring stateless HMAC-SHA256 OTP authentication, an SSLCommerz-integrated marketplace, peer-to-peer rentals, and real-time Socket.io chat.
+                            </p>
+                            <div class="project-contribution">
+                                <strong>Contribution:</strong> Led full-stack development across 8 backend microservices (handling up to 500 concurrent users), implemented CI/CD pipelines using GitHub Actions and Docker (reducing deployment times by 30%), designed PostgreSQL schemas, and integrated JWT RBAC.
+                            </div>
+                        </div>
+                        <div class="project-stack">
+                            <span class="stack-badge"><i class="devicon-react-original colored"></i> React</span>
+                            <span class="stack-badge"><i class="devicon-nodejs-plain colored"></i> Node.js</span>
+                            <span class="stack-badge"><i class="devicon-express-original"></i> Express.js</span>
+                            <span class="stack-badge"><i class="devicon-postgresql-plain colored"></i> PostgreSQL</span>
+                            <span class="stack-badge"><i class="devicon-socketio-original"></i> Socket.io</span>
+                            <span class="stack-badge"><i class="devicon-vitejs-plain colored"></i> Vite</span>
+                            <span class="stack-badge"><i class="devicon-tailwindcss-plain colored"></i> Tailwind CSS</span>
+                            <span class="stack-badge"><i class="devicon-docker-plain colored"></i> Docker</span>
+                            <span class="stack-badge">JWT</span>
+                            <span class="stack-badge">SSLCommerz</span>
+                        </div>
+                    </div>
+
+                    <!-- Project 2: Vitrine -->
+                    <div class="project-card">
+                        <div class="project-top">
+                            <div class="project-header">
+                                <a href="https://vitrine.ahbab.dev/" target="_blank" rel="noopener noreferrer" class="project-title-link">
+                                    <i class="fa-solid fa-store" style="color: var(--accent-purple);"></i> Vitrine
+                                </a>
+                                <div class="project-links">
+                                    <a href="https://github.com/CringyNoob/vitrine" target="_blank" rel="noopener noreferrer" class="project-icon-link" title="GitHub Repository">
+                                        <i class="fa-brands fa-github"></i>
+                                    </a>
+                                    <a href="https://vitrine.ahbab.dev/" target="_blank" rel="noopener noreferrer" class="btn-live-capsule" title="Open Live Demo">
+                                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="project-badge-award">
+                                <i class="fa-solid fa-award"></i> Finalist, The Infinity AI Buildfest 2026
+                            </div>
+                            <p class="project-desc">
+                                A curated software marketplace featuring sandboxed live previews, automated technical specification generation, and AI-driven curation.
+                            </p>
+                            <div class="project-contribution">
+                                <strong>Contribution:</strong> Built end-to-end seller workflows and repository-intake agents, accelerating automated listing generation by 40%. Implemented schema migrations and optimized draft quota lifecycles with local LLM fallbacks.
+                            </div>
+                        </div>
+                        <div class="project-stack">
+                            <span class="stack-badge"><i class="devicon-python-plain colored"></i> Python</span>
+                            <span class="stack-badge"><i class="devicon-fastapi-plain colored"></i> FastAPI</span>
+                            <span class="stack-badge"><i class="devicon-react-original colored"></i> React 18</span>
+                            <span class="stack-badge"><i class="devicon-typescript-plain colored"></i> TypeScript</span>
+                            <span class="stack-badge"><i class="devicon-vitejs-plain colored"></i> Vite</span>
+                            <span class="stack-badge"><i class="devicon-tailwindcss-plain colored"></i> Tailwind CSS</span>
+                            <span class="stack-badge"><i class="devicon-sqlalchemy-plain colored"></i> SQLAlchemy</span>
+                            <span class="stack-badge">Alembic</span>
+                            <span class="stack-badge">OpenAI API</span>
+                            <span class="stack-badge">Ollama</span>
+                            <span class="stack-badge">SQLite/PostgreSQL</span>
+                        </div>
+                    </div>
+
+                    <!-- Project 3: Mr.Bin -->
+                    <div class="project-card">
+                        <div class="project-top">
+                            <div class="project-header">
+                                <a href="https://wastebins.vercel.app/app/dashboard" target="_blank" rel="noopener noreferrer" class="project-title-link">
+                                    <i class="fa-solid fa-trash-can" style="color: var(--accent-emerald);"></i> Mr.Bin
+                                </a>
+                                <div class="project-links">
+                                    <a href="https://github.com/CringyNoob/Mr.Bin" target="_blank" rel="noopener noreferrer" class="project-icon-link" title="GitHub Repository">
+                                        <i class="fa-brands fa-github"></i>
+                                    </a>
+                                    <a href="https://wastebins.vercel.app/app/dashboard" target="_blank" rel="noopener noreferrer" class="btn-live-capsule" title="Open Live Demo">
+                                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="project-badge-award">
+                                <i class="fa-solid fa-award"></i> 4th Runner Up, UIU CSE Project Show 2025
+                            </div>
+                            <p class="project-desc">
+                                A smart waste-management system that optimizes urban collection routes and operational efficiency.
+                            </p>
+                            <div class="project-contribution">
+                                <strong>Contribution:</strong> Built the sensor-data retrieval backend and configured hardware modules, optimizing urban collection routes and reducing simulated collection times by 20%.
+                            </div>
+                        </div>
+                        <div class="project-stack">
+                            <span class="stack-badge"><i class="devicon-cplusplus-plain colored"></i> C++</span>
+                            <span class="stack-badge"><i class="devicon-django-plain colored"></i> Django</span>
+                            <span class="stack-badge">Random Forest</span>
+                            <span class="stack-badge">Priority Dijkstra</span>
+                            <span class="stack-badge"><i class="devicon-arduino-plain colored"></i> IoT Sensors</span>
+                        </div>
+                    </div>
+
+                    <!-- Project 4: DishChord -->
+                    <div class="project-card">
+                        <div class="project-top">
+                            <div class="project-header">
+                                <a href="https://github.com/CringyNoob/DishChordRepo" target="_blank" rel="noopener noreferrer" class="project-title-link">
+                                    <i class="fa-solid fa-utensils" style="color: var(--accent-amber);"></i> DishChord
+                                </a>
+                                <div class="project-links">
+                                    <a href="https://github.com/CringyNoob/DishChordRepo" target="_blank" rel="noopener noreferrer" class="project-icon-link" title="GitHub Repository">
+                                        <i class="fa-brands fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <p class="project-desc">
+                                A recipe and AI-assisted meal-planning platform with categorized ingredient search and MVC architecture.
+                            </p>
+                            <div class="project-contribution">
+                                <strong>Contribution:</strong> Served as team leader, managed the project using Scrum, and led frontend and backend development as a full-stack engineer.
+                            </div>
+                        </div>
+                        <div class="project-stack">
+                            <span class="stack-badge"><i class="devicon-php-plain colored"></i> PHP</span>
+                            <span class="stack-badge"><i class="devicon-html5-plain colored"></i> HTML5</span>
+                            <span class="stack-badge"><i class="devicon-css3-plain colored"></i> CSS3</span>
+                            <span class="stack-badge"><i class="devicon-javascript-plain colored"></i> JavaScript</span>
+                            <span class="stack-badge"><i class="devicon-mysql-plain colored"></i> MySQL</span>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- 5. ACHIEVEMENTS & AWARDS SECTION -->
+            <section id="achievements" class="content-section">
+                <div class="section-header">
+                    <div class="section-icon"><i class="fa-solid fa-trophy"></i></div>
+                    <h2 class="section-title">Achievements &amp; Awards</h2>
+                </div>
+
+                <div class="achievements-grid">
+                    
+                    <!-- Award 1 -->
+                    <div class="achievement-card scholarship">
+                        <div class="achievement-icon-wrap">
+                            <i class="fa-solid fa-medal"></i>
+                        </div>
+                        <div class="achievement-content">
+                            <h4 class="achievement-title">Academic Excellence Scholarship</h4>
+                            <div class="achievement-meta">United International University</div>
+                            <span class="achievement-year">2022 – 2026</span>
+                        </div>
+                    </div>
+
+                    <!-- Award 2 -->
+                    <div class="achievement-card">
+                        <div class="achievement-icon-wrap">
+                            <i class="fa-solid fa-trophy"></i>
+                        </div>
+                        <div class="achievement-content">
+                            <h4 class="achievement-title">Finalist, The Infinity AI Buildfest</h4>
+                            <div class="achievement-meta">Recognized for Vitrine AI Marketplace</div>
+                            <span class="achievement-year">2026</span>
+                        </div>
+                    </div>
+
+                    <!-- Award 3 -->
+                    <div class="achievement-card runner-up">
+                        <div class="achievement-icon-wrap">
+                            <i class="fa-solid fa-award"></i>
+                        </div>
+                        <div class="achievement-content">
+                            <h4 class="achievement-title">1st Runner Up, 12-Hour Online Hackathon</h4>
+                            <div class="achievement-meta">Organized by UIUDH</div>
+                            <span class="achievement-year">2026</span>
+                        </div>
+                    </div>
+
+                    <!-- Award 4 -->
+                    <div class="achievement-card runner-up">
+                        <div class="achievement-icon-wrap">
+                            <i class="fa-solid fa-award"></i>
+                        </div>
+                        <div class="achievement-content">
+                            <h4 class="achievement-title">4th Runner Up, Microprocessors &amp; Microcontrollers Lab</h4>
+                            <div class="achievement-meta">UIU CSE Project Show (Mr.Bin)</div>
+                            <span class="achievement-year">2025</span>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- 6. PUBLICATIONS & MANUSCRIPTS SECTION -->
+            <section id="publications" class="content-section">
+                <div class="section-header">
+                    <div class="section-icon"><i class="fa-solid fa-book-bookmark"></i></div>
+                    <h2 class="section-title">Publications &amp; Manuscripts</h2>
+                </div>
+
+                <!-- Filter Tabs -->
+                <div class="filter-bar">
+                    <button class="filter-btn active" data-filter="all">All (5)</button>
+                    <button class="filter-btn" data-filter="review">Under Review (2)</button>
+                    <button class="filter-btn" data-filter="prep">In Preparation (3)</button>
+                    <button class="filter-btn" data-filter="bio">Computational Biology / ML</button>
+                    <button class="filter-btn" data-filter="ai">AI &amp; HCI Systems</button>
+                </div>
+
+                <div class="publications-list">
+                    
+                    <!-- Pub 1: EPI Benchmark -->
+                    <div class="pub-card" data-category="review" data-topic="bio">
+                        <div class="pub-meta-top">
+                            <span class="pub-status-badge review"><i class="fa-solid fa-clock-rotate-left"></i> Submitted / Under Review</span>
+                            <span class="pub-target-venue"><i class="fa-solid fa-landmark"></i> Briefings in Bioinformatics (Oxford Academic), 2026</span>
+                        </div>
+                        <h3 class="pub-title">
+                            “Benchmarking Enhancer–Promoter Interaction Prediction Models to Understand the Landscape of Different Architectures”
+                        </h3>
+                        <p class="pub-authors">
+                            <span class="author-self">Md. Wali Ullah Khan</span>, et al.
+                        </p>
+                        <div class="pub-actions">
+                            <button class="btn-xs btn-bibtex" data-pub-id="pub-epi-benchmark">
+                                <i class="fa-solid fa-quote-left"></i> BibTeX
+                            </button>
+                            <span class="tag-pill" style="font-size: 0.76rem; padding: 0.2rem 0.6rem;">Bioinformatics</span>
+                            <span class="tag-pill" style="font-size: 0.76rem; padding: 0.2rem 0.6rem;">Deep Learning Benchmarks</span>
+                        </div>
+                    </div>
+
+                    <!-- Pub 2: Holo-GeoN -->
+                    <div class="pub-card" data-category="review" data-topic="bio">
+                        <div class="pub-meta-top">
+                            <span class="pub-status-badge review"><i class="fa-solid fa-clock-rotate-left"></i> Submitted / Under Review</span>
+                            <span class="pub-target-venue"><i class="fa-solid fa-landmark"></i> MLCB 2026 (Machine Learning in Computational Biology)</span>
+                        </div>
+                        <h3 class="pub-title">
+                            “Holo-GeoN: Structure-Free, Physics-Constrained Prediction of Mutation Effects on Protein Stability and Pathogenicity”
+                        </h3>
+                        <p class="pub-authors">
+                            <span class="author-self">Md. Wali Ullah Khan</span>, et al.
+                        </p>
+                        <div class="pub-actions">
+                            <button class="btn-xs btn-bibtex" data-pub-id="pub-holo-geon">
+                                <i class="fa-solid fa-quote-left"></i> BibTeX
+                            </button>
+                            <span class="tag-pill" style="font-size: 0.76rem; padding: 0.2rem 0.6rem;">Protein Stability</span>
+                            <span class="tag-pill" style="font-size: 0.76rem; padding: 0.2rem 0.6rem;">Graph Neural Networks</span>
+                        </div>
+                    </div>
+
+                    <!-- Pub 3: HARNE-PI -->
+                    <div class="pub-card" data-category="prep" data-topic="bio">
+                        <div class="pub-meta-top">
+                            <span class="pub-status-badge prep"><i class="fa-solid fa-pen-nib"></i> In Preparation</span>
+                            <span class="pub-target-venue"><i class="fa-solid fa-bullseye"></i> Target: Nature Methods</span>
+                        </div>
+                        <h3 class="pub-title">
+                            “HARNE-PI: Enhancing Enhancer–Promoter Interaction Prediction via Position-Aware Encoding and KAN–Transformer Fusion”
+                        </h3>
+                        <p class="pub-authors">
+                            <span class="author-self">Md. Wali Ullah Khan</span>, et al.
+                        </p>
+                        <div class="pub-actions">
+                            <button class="btn-xs btn-bibtex" data-pub-id="pub-harne-pi">
+                                <i class="fa-solid fa-quote-left"></i> BibTeX
+                            </button>
+                            <span class="tag-pill" style="font-size: 0.76rem; padding: 0.2rem 0.6rem;">KAN Networks</span>
+                            <span class="tag-pill" style="font-size: 0.76rem; padding: 0.2rem 0.6rem;">Transformer Fusion</span>
+                        </div>
+                    </div>
+
+                    <!-- Pub 4: Algorithmic Companion -->
+                    <div class="pub-card" data-category="prep" data-topic="ai">
+                        <div class="pub-meta-top">
+                            <span class="pub-status-badge prep"><i class="fa-solid fa-pen-nib"></i> In Preparation</span>
+                            <span class="pub-target-venue"><i class="fa-solid fa-bullseye"></i> Target: ACM CHI</span>
+                        </div>
+                        <h3 class="pub-title">
+                            “The Algorithmic Companion: Human Trust, Privacy Awareness, and Self-Disclosure in AI Chatbots—The Effect of Empathy and Follow-up Questions”
+                        </h3>
+                        <p class="pub-authors">
+                            <span class="author-self">Md. Wali Ullah Khan</span>, et al.
+                        </p>
+                        <div class="pub-actions">
+                            <button class="btn-xs btn-bibtex" data-pub-id="pub-algorithmic-companion">
+                                <i class="fa-solid fa-quote-left"></i> BibTeX
+                            </button>
+                            <span class="tag-pill" style="font-size: 0.76rem; padding: 0.2rem 0.6rem;">Human-Computer Interaction</span>
+                            <span class="tag-pill" style="font-size: 0.76rem; padding: 0.2rem 0.6rem;">Conversational AI</span>
+                        </div>
+                    </div>
+
+                    <!-- Pub 5: Multimodal Fraud Detection -->
+                    <div class="pub-card" data-category="prep" data-topic="ai">
+                        <div class="pub-meta-top">
+                            <span class="pub-status-badge prep"><i class="fa-solid fa-pen-nib"></i> In Preparation</span>
+                            <span class="pub-target-venue"><i class="fa-solid fa-bullseye"></i> Target: ACM/IEEE</span>
+                        </div>
+                        <h3 class="pub-title">
+                            “Interpretable Multimodal Mining for Early Financial Fraud Detection: Synthesizing Identity and Transactional Velocity”
+                        </h3>
+                        <p class="pub-authors">
+                            <span class="author-self">Md. Wali Ullah Khan</span>, et al.
+                        </p>
+                        <div class="pub-actions">
+                            <button class="btn-xs btn-bibtex" data-pub-id="pub-fraud-detection">
+                                <i class="fa-solid fa-quote-left"></i> BibTeX
+                            </button>
+                            <span class="tag-pill" style="font-size: 0.76rem; padding: 0.2rem 0.6rem;">Multimodal Learning</span>
+                            <span class="tag-pill" style="font-size: 0.76rem; padding: 0.2rem 0.6rem;">Fraud Detection</span>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- 7. SKILLS SECTION -->
+            <section id="skills" class="content-section">
+                <div class="section-header">
+                    <div class="section-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+                    <h2 class="section-title">Technical Skills</h2>
+                </div>
+
+                <div class="skills-grid">
+                    
+                    <!-- Languages -->
+                    <div class="skill-category-card">
+                        <div class="skill-category-header">
+                            <i class="fa-solid fa-code" style="color: var(--accent-primary);"></i>
+                            <h4 class="skill-category-title">Programming Languages</h4>
+                        </div>
+                        <div class="skill-pills">
+                            <span class="skill-pill"><i class="devicon-c-plain colored"></i> C</span>
+                            <span class="skill-pill"><i class="devicon-cplusplus-plain colored"></i> C++</span>
+                            <span class="skill-pill"><i class="devicon-python-plain colored"></i> Python</span>
+                            <span class="skill-pill"><i class="devicon-java-plain colored"></i> Java</span>
+                            <span class="skill-pill"><i class="devicon-javascript-plain colored"></i> JavaScript</span>
+                            <span class="skill-pill"><i class="devicon-php-plain colored"></i> PHP</span>
+                        </div>
+                    </div>
+
+                    <!-- Web Tech -->
+                    <div class="skill-category-card">
+                        <div class="skill-category-header">
+                            <i class="fa-solid fa-globe" style="color: var(--accent-secondary);"></i>
+                            <h4 class="skill-category-title">Web Technologies</h4>
+                        </div>
+                        <div class="skill-pills">
+                            <span class="skill-pill"><i class="devicon-react-original colored"></i> React</span>
+                            <span class="skill-pill"><i class="devicon-nodejs-plain colored"></i> Node.js</span>
+                            <span class="skill-pill"><i class="devicon-tailwindcss-plain colored"></i> Tailwind CSS</span>
+                            <span class="skill-pill"><i class="devicon-bootstrap-plain colored"></i> Bootstrap</span>
+                            <span class="skill-pill"><i class="fa-solid fa-plug"></i> REST APIs</span>
+                        </div>
+                    </div>
+
+                    <!-- Databases -->
+                    <div class="skill-category-card">
+                        <div class="skill-category-header">
+                            <i class="fa-solid fa-database" style="color: var(--accent-emerald);"></i>
+                            <h4 class="skill-category-title">Database Systems</h4>
+                        </div>
+                        <div class="skill-pills">
+                            <span class="skill-pill"><i class="devicon-postgresql-plain colored"></i> PostgreSQL</span>
+                            <span class="skill-pill"><i class="devicon-mysql-plain colored"></i> MySQL</span>
+                            <span class="skill-pill"><i class="fa-solid fa-server"></i> XAMPP</span>
+                        </div>
+                    </div>
+
+                    <!-- Data Science & ML -->
+                    <div class="skill-category-card">
+                        <div class="skill-category-header">
+                            <i class="fa-solid fa-brain" style="color: var(--accent-purple);"></i>
+                            <h4 class="skill-category-title">Data Science &amp; ML</h4>
+                        </div>
+                        <div class="skill-pills">
+                            <span class="skill-pill"><i class="devicon-pytorch-plain colored"></i> PyTorch</span>
+                            <span class="skill-pill"><i class="fa-solid fa-cloud"></i> Vertex AI</span>
+                            <span class="skill-pill"><i class="devicon-jupyter-plain colored"></i> Jupyter</span>
+                            <span class="skill-pill"><i class="fa-solid fa-laptop-code"></i> Google Colab</span>
+                        </div>
+                    </div>
+
+                    <!-- Embedded Systems & IoT -->
+                    <div class="skill-category-card">
+                        <div class="skill-category-header">
+                            <i class="fa-solid fa-microchip" style="color: var(--accent-amber);"></i>
+                            <h4 class="skill-category-title">Embedded Systems &amp; IoT</h4>
+                        </div>
+                        <div class="skill-pills">
+                            <span class="skill-pill"><i class="devicon-arduino-plain colored"></i> Arduino</span>
+                            <span class="skill-pill"><i class="fa-solid fa-network-wired"></i> ESP32</span>
+                            <span class="skill-pill"><i class="fa-solid fa-desktop"></i> Arduino IDE</span>
+                            <span class="skill-pill"><i class="fa-solid fa-diagram-project"></i> Logisim</span>
+                            <span class="skill-pill"><i class="fa-solid fa-microchip"></i> Proteus</span>
+                        </div>
+                    </div>
+
+                    <!-- Tools & Practices -->
+                    <div class="skill-category-card">
+                        <div class="skill-category-header">
+                            <i class="fa-solid fa-toolbox" style="color: var(--accent-rose);"></i>
+                            <h4 class="skill-category-title">Tools &amp; Practices</h4>
+                        </div>
+                        <div class="skill-pills">
+                            <span class="skill-pill"><i class="devicon-git-plain colored"></i> Git / GitHub</span>
+                            <span class="skill-pill"><i class="fa-solid fa-code-branch"></i> Version Control &amp; CI/CD</span>
+                            <span class="skill-pill"><i class="devicon-vscode-plain colored"></i> VS Code</span>
+                            <span class="skill-pill"><i class="devicon-intellij-plain colored"></i> IntelliJ IDEA</span>
+                            <span class="skill-pill"><i class="fa-solid fa-cube"></i> Code::Blocks</span>
+                            <span class="skill-pill"><i class="devicon-figma-plain colored"></i> Figma</span>
+                            <span class="skill-pill"><i class="fa-solid fa-diagram-next"></i> SDLC, Agile &amp; Scrum</span>
+                            <span class="skill-pill"><i class="fa-solid fa-users"></i> Team Lead</span>
+                            <span class="skill-pill"><i class="fa-solid fa-wand-magic-sparkles"></i> Antigravity / Cursor / Claude</span>
+                            <span class="skill-pill"><i class="fa-solid fa-network-wired"></i> Cisco Packet Tracer</span>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- 8. EXTRACURRICULARS & LEADERSHIP SECTION -->
+            <section id="extracurriculars" class="content-section">
+                <div class="section-header">
+                    <div class="section-icon"><i class="fa-solid fa-users-gear"></i></div>
+                    <h2 class="section-title">Extracurriculars &amp; Leadership</h2>
+                </div>
+
+                <div class="extracurricular-list">
+                    
+                    <!-- Role 1: Executive Programming -->
+                    <div class="extra-card">
+                        <div class="extra-header">
+                            <h3 class="extra-role">Executive – Programming Department, Academic and Olympiad Wing</h3>
+                            <span class="education-date"><i class="fa-regular fa-calendar"></i> Apr 2026 – Present</span>
+                        </div>
+                        <div class="extra-org">
+                            <i class="fa-solid fa-people-group"></i> UIU Computer Club · Dhaka, Bangladesh
+                        </div>
+                        <p class="extra-desc">
+                            Contributing to coordinating programming contests, managing training modules, and mentoring club members for academic excellence.
+                        </p>
+                    </div>
+
+                    <!-- Role 2: Head of Esports Wing -->
+                    <div class="extra-card">
+                        <div class="extra-header">
+                            <h3 class="extra-role">Head of Esports Wing</h3>
+                            <span class="education-date"><i class="fa-regular fa-calendar"></i> Jan 2025 – Apr 2026</span>
+                        </div>
+                        <div class="extra-org">
+                            <i class="fa-solid fa-people-group"></i> UIU Computer Club · Dhaka, Bangladesh
+                        </div>
+                        <p class="extra-desc">
+                            Led the strategic operations and management of the Esports Wing, organizing competitive gaming events and fostering player communities. (Previously served as an Associate within the same department from Aug 2023 to Jan 2025).
+                        </p>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- 9. CONTACT SECTION -->
+            <section id="contact" class="content-section">
+                <div class="section-header">
+                    <div class="section-icon"><i class="fa-solid fa-paper-plane"></i></div>
+                    <h2 class="section-title">Get In Touch</h2>
+                </div>
+
+                <div class="contact-grid">
+                    <a href="mailto:wali.official71@gmail.com" class="contact-card" target="_blank" rel="noopener noreferrer">
+                        <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+                        <div class="contact-type">Email</div>
+                        <div class="contact-val">wali.official71@gmail.com</div>
+                    </a>
+
+                    <a href="tel:+8801682310315" class="contact-card">
+                        <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+                        <div class="contact-type">Phone / WhatsApp</div>
+                        <div class="contact-val">+880 1682310315</div>
+                    </a>
+
+                    <a href="https://github.com/CringyNoob" class="contact-card" target="_blank" rel="noopener noreferrer">
+                        <div class="contact-icon"><i class="fa-brands fa-github"></i></div>
+                        <div class="contact-type">GitHub</div>
+                        <div class="contact-val">@CringyNoob</div>
+                    </a>
+
+                    <a href="https://www.linkedin.com/search/results/all/?keywords=Md%20Wali%20Ullah%20Khan" class="contact-card" target="_blank" rel="noopener noreferrer">
+                        <div class="contact-icon"><i class="fa-brands fa-linkedin-in"></i></div>
+                        <div class="contact-type">LinkedIn</div>
+                        <div class="contact-val">Md Wali Ullah Khan</div>
+                    </a>
+                </div>
+
+                <!-- Footer -->
+                <footer class="page-footer">
+                    <p>Designed &amp; Built by <a href="https://github.com/CringyNoob">Md. Wali Ullah Khan</a> · Powered by GitHub Pages</p>
+                    <p style="margin-top: 0.3rem; font-size: 0.78rem;">Press <kbd style="background: var(--bg-card); padding: 2px 6px; border-radius: 4px; border: 1px solid var(--border-color);">Ctrl</kbd> + <kbd style="background: var(--bg-card); padding: 2px 6px; border-radius: 4px; border: 1px solid var(--border-color);">P</kbd> to view or print official resume</p>
+                </footer>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" id="scroll-to-top" aria-label="Scroll to Top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- BibTeX Modal -->
+    <div class="modal-backdrop" id="bibtex-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title"><i class="fa-solid fa-quote-left" style="color: var(--accent-primary);"></i> BibTeX Citation</h3>
+                <button class="modal-close-btn" id="modal-close-btn" aria-label="Close modal">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <pre class="bibtex-code" id="bibtex-code"></pre>
+            <div style="display: flex; justify-content: flex-end; gap: 0.8rem;">
+                <button class="btn-primary" id="copy-bibtex-btn">
+                    <i class="fa-solid fa-copy"></i> Copy Citation
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast-notification" id="toast-notification">
+        <i class="fa-solid fa-circle-check"></i>
+        <span id="toast-message">Copied to clipboard!</span>
+    </div>
+
+    <!-- Interactivity Script -->
+    <script src="./js/script.js"></script>
+</body>
+</html>
